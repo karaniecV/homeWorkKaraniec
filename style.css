@@ -3,29 +3,44 @@ body{
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
-    background: ;
+    background: rgb(231, 223, 223);
+    background-image: url(https://www.grodno.it-academy.by/local/images/logo.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 header{
-    padding: 50px;
-    margin: auto;
+    color: seashell;
+   
     font-size: 30px;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
+
 .cell{
     display: block;
     float: left;
     width: 25% - 10px;
     padding: 30px;
-    background: lightcoral;
+    margin-top: 100px;
     margin: 10px;
+    background-image: radial-gradient(#5b4ffc,  rgb(33, 78, 99));
+    box-shadow: 0px 3px 3px 0px #212121;
 }
 .workNumber{
     text-transform: uppercase;
 }
 .cell a{
-    background: navy;
+    background-image: linear-gradient(to top,white, red, white);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     color: oldlace;
     padding: 5px 10px;
+}
+.ststus{
+    color: rgb(104, 9, 9);
+    font-weight: bold;
 }
