@@ -22,12 +22,16 @@ header{
 .cell{
     display: block;
     float: left;
-    width: 25% - 10px;
+    width: 23%;
     padding: 30px;
     margin-top: 100px;
     margin: 10px;
     background-image: radial-gradient(#5b4ffc,  rgb(33, 78, 99));
     box-shadow: 0px 3px 3px 0px #212121;
+    opacity: .9;
+}
+.cell:hover{
+    background-image: radial-gradient( rgb(14, 40, 53), #aaa6d6);
 }
 .workNumber{
     text-transform: uppercase;
@@ -36,11 +40,15 @@ header{
     background-image: linear-gradient(to top,white, red, white);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 14px;
     color: oldlace;
     padding: 5px 10px;
 }
 .ststus{
     color: rgb(104, 9, 9);
     font-weight: bold;
+}
+a:hover{
+    padding: 10px 10px;
+    font-size: 15px;
 }
