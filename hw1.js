@@ -32,8 +32,7 @@ function makeTest() {
       'яблоко', 'яблока', 'яблок'));
   }
 }
-documentElementById
-button.onclick = makeTest();
+makeTest();
 
 
 
