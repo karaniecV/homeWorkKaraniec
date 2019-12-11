@@ -1,4 +1,4 @@
-// Task №1
+//   Task №1
 
 function getNumWord(num, word1, word2, word5) {
   let dd = num % 100;
@@ -32,12 +32,11 @@ function makeTest() {
       'яблоко', 'яблока', 'яблок'));
   }
 }
-documentElementById
-button.onclick = makeTest();
+makeTest();
 
 
 
-// Task №2
+//   Task №2
 
 function anketa() {
   let lastName = prompt('Ваша фамилия');
@@ -46,32 +45,25 @@ function anketa() {
   let age = parseInt(prompt('Ваш возраст в годах'));
   let day = age * 365;
   let sex = confirm('Ваш пол мужской?')
-  if (sex == true) {
-    sex = 'мужской';
-  } else {
-    sex = 'женский';
-  };
+  sex = sex ? 'мужской' : 'женский';
   let old = age + 5;
   let pension = 'нет';
-  if ((age >= 62) && (sex == 'мужской')) {
-    pension = 'да';
-  };
-  if ((age >= 57) && (sex == 'женский')) {
+  if (age >= 62 && sex == 'мужской' || age >= 57 && sex == 'женский') {
     pension = 'да';
   };
 
-  alert('ваше ФИО:' + ' ' + lastName + ' ' + firstName + ' ' + patronymic +
-    '\n' + 'ваш возраст в годах:' + ' ' + age +
-    '\n' + 'ваш возраст в днях:' + ' ' + day +
-    '\n' + 'через 5 лет вам будет:' + ' ' + old +
-    '\n' + 'ваш пол:' + ' ' + sex +
-    '\n' + 'вы на пенсии:' + ' ' + pension);
+  alert(`  ваше ФИО: ${lastName + ' ' + firstName + ' ' + patronymic}
+  ваш возраст в годах: ${age}
+  ваш возраст в днях: ${day}
+  через 5 лет вам будет: ${old}
+  ваш пол: ${sex}
+  вы на пенсии: ${pension}`);
 }
 anketa();
 
 
 
-//                     Task №3
+//   Task №3
 
 function palindrom(str) {
   var reverseArr = [];
@@ -79,20 +71,14 @@ function palindrom(str) {
   for (var i = arr.length - 1; i >= 0; i--) {
     reverseArr.push(arr[i]);
   }
-  if (reverseArr.join('') === str) {
-    alert('palindrom');
-  }
-  else {
-    alert('ne palindrom');
-  }
-
+  return reverseArr.join('') === str
 }
-palindrom('1221');
+console.log(palindrom('12321'));
 
 
 
 
-//                     // Task №4
+//   Task №4
 
 function getMultiplyTable() {
   const body = document.body;
