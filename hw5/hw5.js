@@ -26,6 +26,7 @@ const number1 = document.querySelector('#number1');
 const btnStart = document.getElementById('btn-start');
 const btnPause = document.getElementById('btn-pause');
 const timer = new Timer( number);
+const timer2 = new Timer( number1);
 
 btnStart.addEventListener('click', () => {
   if (number1.value > 60) {
@@ -37,6 +38,7 @@ btnStart.addEventListener('click', () => {
 
 btnPause.addEventListener('click', () => {
   timer.pause();
+  timer2.start();
 });
 
 
