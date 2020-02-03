@@ -40,9 +40,8 @@ function stringTask1(str) {
 
     const myArr = ['FIVE,', 'FOUR,', 'THREE,', 'TEN!', 'NINE,', 'SEVEN,', 'EIGHT,'];
 
-    let arr = str.split(' ');
-    let result = arr;
-
+    let result = str.split(' ');
+   
     myArr.forEach((item) => {
         result = result.filter((result) => {
             return result !== item;
