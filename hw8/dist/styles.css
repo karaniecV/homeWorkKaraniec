@@ -1,0 +1,30 @@
+.maim-content {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+
+}
+
+@media (max-width: 800px){
+
+	.news-list .news-photo{
+		width: 225px;
+	}
+
+	.news-list .news-description{
+		max-width: 225px;
+	}
+}
+h2{
+    justify-content: center;
+    align-items: stretch ;
+}
+
+.news-list{
+    padding-bottom: 50px;
+}
+nav{
+    position: fixed;
+
+}
