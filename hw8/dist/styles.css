@@ -1,20 +1,23 @@
 .maim-content {
+    display: flex;
     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
-    float: left;
-
+    margin-bottom: 60px;
+}
+.news-string{
+    display: flex;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px){ 
 
-	.news-list .news-photo{
-		width: 225px;
-	}
+.news-list .news-photo{
+	width: 225px;
+}
 
-	.news-list .news-description{
-		max-width: 225px;
-	}
+.news-list .news-description{
+	max-width: 225px;
+}
 }
 h2{
     justify-content: center;

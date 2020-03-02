@@ -8,10 +8,9 @@ import { Search } from './search';
 class NewsPage { 
     constructor() {
         this.news = [];
-        this.about = [1, 2, 3];
         this.router = new Router();
         this.renderPage = new RenderPage(this.search, this.router);
-        this.search = new Search();
+        this.search = new Search(this.renderPage);
         this.init();
 
     }
@@ -27,11 +26,9 @@ class NewsPage {
                 console.log(data);
                 this.renderPage.renderAllNews(data);
                 this.renderPage.renderAboutPage();
+                this.search.searchMethod(data);
                 this.initRouter();
                 this.router.render(decodeURI(location.pathname));
-                this.search.searchMethod(data);
-                this.search.renderNews();
-                
             });
         
     }
@@ -42,11 +39,7 @@ class NewsPage {
         this.router.addRouter('news', this.renderPage.renderSingleNews.bind(this.renderPage,
              this.news));
         this.router.addRouter('about', this.renderPage.renderAboutPage.bind(this.renderPage));
-        this.router.addRouter('search', this.renderPage.renderSearchPage.bind(this.renderPage, this.news));
     }
-    
-    
-
 }
 
 const newsPage = new NewsPage();

@@ -2,9 +2,9 @@ import { CONFIG } from "./config";
 import { RenderPage } from './render-page';
 
 export class Search {
-  constructor() {
+  constructor(renderPage) {
     this.newsArray = [];
-    this.renderPage = new RenderPage();
+    this.renderPage = renderPage;
   }
 
   searchMethod(data) { 
@@ -12,7 +12,7 @@ export class Search {
     let subButton = document.querySelector(CONFIG.selectors.subButton);
     let searchForm = document.querySelector(CONFIG.selectors.form);
     let searchInput = document.querySelector(CONFIG.selectors.input);
-    searchInput.addEventListener('change', (e) => {
+    searchInput.addEventListener('input', (e) => {
       e.preventDefault();
       this.newsArray.length = 0;
       inputValue = searchInput.value
