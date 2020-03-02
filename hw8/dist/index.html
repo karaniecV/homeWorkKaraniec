@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SPA</title>
+	<link href="/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-secondary bg-secondary" style="margin:24px 0;">
+		<div class="container">
+			<a class="navbar-brand" href="javascript:void(0)"><img class="logo" style="width: 40px; padding-left: 10px;"
+					src="/img/logo.svg" alt="">
+			</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb"
+				aria-expanded="true">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse show" id="navb">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0)">Новости</a>
+					</li>
+					<li class="nav-item  about">
+						<a class="nav-link" href="javascript:void(0)">About</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0 search-form">
+					<input class="form-control mr-sm-2 search-input" type="text" placeholder="Search">
+					<button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div class="main-content container">
+
+		<div class="all-news page">
+
+			<ul class="news-list">
+				<div class="conteiner">
+					<script id="news-template" type="x-handlebars-template">​
+					{{#each this}}
+						<li style="padding-bottom: 30px" data-index="{{id}}">
+							<div class="news-string">
+								<a href="#" class="news-photo"><img src="/{{image.small}}" height="130" alt="{{name}}"/></a>
+								<h2 class="titleEl" style="padding-left: 10px"><a href="#"> {{title}} </a></h2>
+							</div>
+							<div><span>Дата публикации: </span>{{date}}</div>
+							<div><span>Источник: </span>{{massmedia}}</div>
+						</li>
+					{{/each}}
+				</script> 
+				</div>
+			</ul>
+
+		</div>
+
+	</div>
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<script src="/bundle.js"></script>
+</body>
+
+</html>
